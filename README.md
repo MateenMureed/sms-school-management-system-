@@ -41,6 +41,16 @@ School Management System is made by using TKINTER library which is Graphical Use
 - **Tools/Platforms:** VS Code, MySQL Workbench
 - **Databases:** MySQL
 
+## Screenshots
+
+Here are some screenshots of the School Management System:
+
+### Main Interface
+![Main Interface](https://github.com/MateenMureed/sms-school-management-system-/blob/main/Picture1.png)
+![Student Records](https://github.com/MateenMureed/sms-school-management-system-/blob/main/Picture2.png)
+![Fee Management](https://github.com/MateenMureed/sms-school-management-system-/blob/main/Picture3.png)
+![Payroll Management](https://github.com/MateenMureed/sms-school-management-system-/blob/main/Picture4.png)
+
 ## Installation
 
 To set up the School Management System locally, follow these steps:
