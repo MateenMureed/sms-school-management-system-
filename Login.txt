@@ -1,0 +1,9 @@
+create table try_data(
+ID int auto_increment,
+F_Name varchar(20),
+L_Name varchar(20),
+Email varchar(32) unique check(Email like '%_@__%.__%'),
+Password varchar(40),
+Phone varchar(11),
+Gender varchar(5),
+primary key(ID));

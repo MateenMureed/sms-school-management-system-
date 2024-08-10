@@ -1,0 +1,74 @@
+create table try_data(
+ID int auto_increment,
+F_Name varchar(20),
+L_Name varchar(20),
+Email varchar(32) unique check(Email like '%_@__%.__%'),
+Password varchar(40),
+Phone varchar(11),
+Gender varchar(5),
+primary key(ID));
+
+create table student_data(
+ID int not null,
+Class varchar(15),
+Std_Name varchar(40),
+Father_Name varchar(40),
+Gender varchar(5) check(Gender = "Male" or Gender="Female" or Gender = "male" or Gender = "female"),
+DOB date,
+Email varchar(32) unique check (Email like '%_@__%.__%'), 
+Phone varchar(11),
+Address varchar(60),
+Image nvarchar(255),
+Fee varchar(40),
+primary key(ID));
+
+create table fee(
+ID int references student_data(ID),
+Receipt_No int,
+Std_Name varchar(32),
+Class varchar(15),
+Fee_Month varchar(20),
+Pay_Date date,
+Total varchar(100),
+Paid varchar(100),
+Balance varchar(100),
+primary key(Receipt_No));
+
+create table staff_registration(
+ID int,
+Staff_Name varchar(30),
+Role varchar(20),
+DOB date,
+Joinig_Date date,
+Gender varchar(5) check(Gender = "Male" or Gender="Female" or Gender = "male" or Gender = "female"),
+Email varchar(32) unique check (Email like '%_@__%.__%'), 
+CNIC varchar(19) check(CNIC like '_____-_______-_'),
+Address varchar(60),
+Image nvarchar(255),
+Unique(CNIC),
+Account_No varchar(40) unique,
+Phone varchar(11),
+primary key(ID));
+
+create table payroll(
+Receipt_no int not null auto_increment references staff_registration(ID),
+ID int references staff_registration(ID),
+Staff_Name varchar(30),
+Role varchar(20),
+Joinig_Date date,
+Account_No varchar(40),
+Cur_Date date,
+Basic varchar(250),
+Month varchar(15) check (Month != "Month"),
+Medical varchar(100),
+House varchar(100),
+Conveyance varchar(100),
+Tax varchar(100),
+Loan varchar(100),
+Add_Salary varchar(100),
+Gross varchar(100),
+Net varchar(100),
+getloan varchar(255),
+getadvance varchar(255),
+primary key(Receipt_no));
+
