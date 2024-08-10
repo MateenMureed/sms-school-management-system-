@@ -144,12 +144,3 @@ CREATE TABLE payroll (
     PRIMARY KEY (Receipt_no)
 );
 '''
-
-
-## Usage
-
-Run the application by executing the main script:
-
-```bash
-python main.py
-
