@@ -18,3 +18,29 @@ The Project is written in Python and is developed on Python Integrated Developme
 ![Alt text](https://github.com/MateenMureed/sms-school-management-system-/blob/main/Hotel%20Management%20System/Picture4.png))
 ![Alt text](https://github.com/MateenMureed/sms-school-management-system-/blob/main/Hotel%20Management%20System/Picture5.png))
 
+## Database Setup for HOTEL
+
+This section describes how to set up the database and create the necessary table.
+
+### 1. Create the Database
+
+```sql
+CREATE DATABASE HOTEL;
+USE HOTEL;
+CREATE TABLE PI (
+    NAME VARCHAR(32),
+    GENDER VARCHAR(10),
+    ADDRESS VARCHAR(40),
+    AGE VARCHAR(40),
+    CNIC VARCHAR(32),
+    PHONE VARCHAR(11),
+    ROOM_NO INT,
+    RESERVATION_DATE DATE,
+    HOW INT,
+    AMOUNT INT,
+    P_METHOD VARCHAR(30),
+    CARD_NO VARCHAR(30),
+    PRIMARY KEY (CNIC)
+);
+
+
